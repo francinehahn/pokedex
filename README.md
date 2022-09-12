@@ -7,7 +7,7 @@ Este projeto foi desenvolvido como parte da fixação de conteúdo de ReactJS do
 - Maria Fernandez de Moura Ferro
 
 ## Link do Surge:
-uppity-partner.surge.sh
+https://possessive-shape.surge.sh/
 
 ## O que funciona:
 - Requisição de todos os pokémons disponíveis na API;
