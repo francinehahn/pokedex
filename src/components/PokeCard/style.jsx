@@ -5,7 +5,7 @@ export const Card = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #f7f7f7;
     text-align: center;
     img {
         margin-bottom: 1vw;

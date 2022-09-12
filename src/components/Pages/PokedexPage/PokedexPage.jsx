@@ -98,8 +98,6 @@ export function PokedexPage() {
             if(result.isConfirmed) {
                 setPokedexList([])
                 Swal.fire('Pokédex limpa!')
-            } else if(result.isDenied) {
-                Swal.fire('Pokémons mantidos na sua Pokédex!')
             }
         })
     }

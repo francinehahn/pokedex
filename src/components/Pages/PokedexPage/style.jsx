@@ -37,7 +37,7 @@ export const Battle = styled.form `
     gap: 1.5vw;
     margin: 2vh 0;
     padding: 3vh 0;
-    background-color: #f0f0f0;
+    background-color: #f7f7f7;
     width: 100%;
     select {
         padding: 1vh 1vw;

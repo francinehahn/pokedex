@@ -30,7 +30,7 @@ export const Container = styled.main `
     h1 {
         line-height: 6vh;
         @media screen and (min-width: 1024px) {
-            font-size: 30px;
+            font-size: 28px;
         }
         @media screen and (min-width: 800px) and (max-width: 1024px) {
             font-size: 26px;
@@ -45,7 +45,7 @@ export const Container = styled.main `
     h2 {
         line-height: 6vh;
         @media screen and (min-width: 1024px) {
-            font-size: 28px;
+            font-size: 26px;
         }
         @media screen and (min-width: 800px) and (max-width: 1024px) {
             font-size: 24px;
