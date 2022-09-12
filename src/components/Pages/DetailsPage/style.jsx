@@ -6,6 +6,7 @@ export const Container = styled.section `
     flex-wrap: wrap;
     justify-content: center;
     gap: 15vw;
+    margin: 0 6vw;
     padding-bottom: 5vh;
     picture {
         display: flex;
@@ -42,44 +43,40 @@ export const TypesContainer = styled.div`
     align-items: center;
     justify-content: center;
     gap: 5vw;
-    margin: 5vh 0;
+    margin: 5vh 4vw;
     ul {
         display: flex;
-        gap: 20px;
+        gap: 2vw;
         justify-content: center;
+    }
+    button {
+        padding: 1.5vh;
     }
 `
 
 export const TypeList = styled.li `
-        width: 7vw;
         text-align: center;
         background-color: ${(props) => props.background};
         color: ${(props) => props.color};
         opacity: 85%;
         border: 1px solid ${(props) => props.color};
-        padding: .5vh;
+        padding: .5vw;
+
+        @media screen and (min-width: 1100px) {
+            min-width: 8vw;
+        }
+
+        @media screen and (min-width: 900px) and (max-width: 1100px) {
+            min-width: 10vw;
+        }
+
+        @media screen and (min-width: 526px) and (max-width: 900px){
+            min-width: 14vw;
+        }
 
         @media screen and (max-width: 525px){
-            min-width: 17vw;
+            min-width: 20vw;
         }
-
-        @media screen and (min-width: 526px) and (max-width: 800px){
-            min-width: 15vw;
-        }
-
-        @media screen and (min-width: 801px){
-            min-width: 6vw;
-        }
-
-        span {
-            @media screen and (max-width: 525px){
-                font-size: 3vw;
-            }
-            @media screen and (min-width: 801px){
-                font-size: 1vw;
-            }
-        }
-        
 `
 
 export const Loading = styled.img `

@@ -165,7 +165,7 @@ export function DetailsPage() {
             {!isLoadingPokemons && dataPokemons && (
                 <>
                     <TypesContainer>
-                        <button onClick={addOrRemove}>{listOfNames.includes(pokemon)? "Remover da pokédex" : "Adicionar à pokédex"}</button>
+                        <button onClick={addOrRemove}>{listOfNames.includes(pokemon)? "Remover" : "Adicionar"}</button>
                         <h1>{dataPokemons.name.toUpperCase()}</h1>
                         <ul>{listTypes}</ul>
                     </TypesContainer>
