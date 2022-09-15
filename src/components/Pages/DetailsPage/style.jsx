@@ -1,19 +1,46 @@
 import styled from "styled-components";
 
+export const DetailsContainer = styled.section `
+    background-image: url(${props => props.background});
+    background-size: cover;
+    background-position: bottom;
+    min-height: 100vh;
+`
 
 export const Container = styled.section `
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15vw;
     margin: 0 6vw;
     padding-bottom: 5vh;
-    picture {
-        display: flex;
-        flex-direction: column;
-        gap: 1vh;
+    @media screen and (min-width: 1000px) {
+        gap: 15vw;   
+    }
+    @media screen and (min-width: 800px) and (max-width: 1000px) {
+        gap: 10vw;   
+    }
+    @media screen and (max-width: 800px) {
+        gap: 5vw;   
+    }
+    img {
+        @media screen and (min-width: 850px) {
+            width: 20%;
+            height: 25%;
+        }
+        @media screen and (min-width: 500px) and (max-width: 850px) {
+            margin-right: 15vw;
+            width: 35%;
+            height: 40%;
+        }
+        @media screen and (max-width: 500px) {
+            width: 45%;
+            height: 50%;
+        }
     }
     div {
+        h2 {
+            margin-top: 2vh;
+        }
         :nth-child(1) {
             p:nth-child(1) {
                 text-align: center;
@@ -21,7 +48,7 @@ export const Container = styled.section `
         }
         :nth-child(3) {
             ul {
-                height: 60vh;
+                height: 55vh;
                 overflow-y: scroll;
                 ::-webkit-scrollbar-track {
                     background-color: #ebe9e9;
@@ -43,7 +70,12 @@ export const TypesContainer = styled.div`
     align-items: center;
     justify-content: center;
     gap: 5vw;
-    margin: 5vh 4vw;
+    @media screen and (min-width: 1000px) {
+        margin: 5vh 0;
+    }
+    @media screen and (max-width: 1000px) {
+        margin: 7vh 0 5vh 0;
+    }
     ul {
         display: flex;
         gap: 2vw;
@@ -56,14 +88,13 @@ export const TypesContainer = styled.div`
 
 export const TypeList = styled.li `
         text-align: center;
-        background-color: ${(props) => props.background};
-        color: ${(props) => props.color};
-        opacity: 85%;
-        border: 1px solid ${(props) => props.color};
-        padding: .5vw;
+        background-color: ${props => props.background};
+        color: ${props => props.color};
+        padding: .6vh 0;
+        border-radius: 5px;
 
         @media screen and (min-width: 1100px) {
-            min-width: 8vw;
+            min-width: 7vw;
         }
 
         @media screen and (min-width: 900px) and (max-width: 1100px) {

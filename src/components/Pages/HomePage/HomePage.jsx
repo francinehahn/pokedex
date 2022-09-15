@@ -1,14 +1,14 @@
 import React, { useContext, useState } from "react";
 import { Header } from "../../Header/Header"
 import PokeCard from "../../PokeCard/PokeCard";
-import { ButtonsPage, CardsContainer, Loading } from "./style";
+import { HomeContainer, ButtonsPage, CardsContainer, Loading } from "./style";
 import loading from '../../../img/loading.png'
 import { GlobalContext } from "../../../context/GlobalContext";
 import useRequestData from "../../../hooks/useRequestData";
 import { baseUrl } from "../../../constants/constants";
 import arrow from '../../../img/arrow.png'
 import arrowLeft from '../../../img/arrow-left.png'
-
+import background from '../../../img/background.png'
 
 export function HomePage() {
     const [offset, setOffset] = useState(0)
@@ -79,7 +79,7 @@ export function HomePage() {
     }
 
     return (
-        <>
+        <HomeContainer background={background}>
             <Header/>
 
             {isLoadingPokemons && <Loading src={loading} alt={'Ícone de uma meia lua rodando'}/>}
@@ -91,6 +91,6 @@ export function HomePage() {
             {!isLoadingPokemons && dataPokemons && <>{buttons}</>}
 
             {!isLoadingPokemons && errorPokemons && <p>Erro: {errorPokemons}</p>}
-        </>
+        </HomeContainer>
     )
 }

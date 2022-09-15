@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
 
+export const PokedexContainer = styled.section `
+    background-image: url(${props => props.background});
+    background-size: cover;
+    background-position: bottom;
+    min-height: 100vh;
+`
+
 export const ContainerPokedex= styled.section`
     display: flex;
     flex-direction: column;
@@ -35,29 +42,29 @@ export const Battle = styled.form `
     align-items: center;
     justify-content: center;
     gap: 1.5vw;
-    margin: 2vh 0;
+    margin: 2vh 0 2vh 4.7vw;
     padding: 3vh 0;
-    background-color: #f7f7f7;
-    width: 100%;
+    width: 95%;
     select {
         padding: 1vh 1vw;
+        border: none;
     }
     img {
         cursor: pointer;
         @media screen and (min-width: 1000px) {
-            width: 3%;
+            width: 3.3%;
         }
         @media screen and (min-width: 800px) and (max-width: 1000px) {
-            width: 4%;
-        }
-        @media screen and (min-width: 600px) and (max-width: 800px) {
             width: 5%;
         }
-        @media screen and (min-width: 500px) and (max-width: 600px) {
+        @media screen and (min-width: 600px) and (max-width: 800px) {
             width: 6%;
         }
-        @media screen and (max-width: 500px) {
+        @media screen and (min-width: 500px) and (max-width: 600px) {
             width: 7%;
+        }
+        @media screen and (max-width: 500px) {
+            width: 8%;
         }
         :hover {
             opacity: .8;
@@ -69,8 +76,9 @@ export const Winner = styled.section `
     background-color: var(--light-blue);
     position: absolute;
     top: 0;
-    min-height: 100vh;
-    min-width: 100vw;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
     h2 {
         color: white;
         text-align: center;
@@ -80,13 +88,19 @@ export const Winner = styled.section `
         display: block;
         margin: 2vh auto 0 auto;
         @media screen and (min-width: 1100px) {
-            width: 6%;
+            width: 12%;
         }
-        @media screen and (min-width: 600px) and (max-width: 1100px) {
-            width: 10%;
+        @media screen and (min-width: 800px) and (max-width: 1100px) {
+            width: 15%;
         }
-        @media screen and (max-width: 600px) {
+        @media screen and (min-width: 600px) and (max-width: 800px) {
             width: 20%;
+        }
+        @media screen and (min-width: 400px) and (max-width: 600px) {
+            width: 25%;
+        }
+        @media screen and (max-width: 400px) {
+            width: 30%;
         }
         @keyframes animationPokemon {
             0% {transform: translateY(1.5vw)}
@@ -97,7 +111,8 @@ export const Winner = styled.section `
     }
     button {
         display: block;
-        margin: 3.5vh auto;
+        padding: 1.5vh 2vw;
+        margin: 10vh auto;
     }
 `
 

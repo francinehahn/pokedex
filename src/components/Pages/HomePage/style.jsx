@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const HomeContainer = styled.section `
+    background-image: url(${props => props.background});
+    background-size: cover;
+    background-position: bottom;
+    min-height: 100vh;
+`
+
 export const CardsContainer = styled.section`
     margin: 5vh 0;
     display: flex;

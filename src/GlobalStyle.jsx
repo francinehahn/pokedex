@@ -4,10 +4,8 @@ import styled, { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle `
 
     :root {
-        --dark-blue: #0A285F;
         --light-blue: #0075BE;
         --dark-yellow: #D5A100;
-        --light-yellow: #FFCC00;
     }
 
     * {
@@ -67,18 +65,13 @@ export const Container = styled.main `
         :hover {
             opacity: .8;
         }
-        @media screen and (min-width: 800px){
-            margin-bottom: 1.5vw;
-            margin-top: 1vw;
-            padding: 1.2vh .7vw;
+        @media screen and (min-width: 1000px){
+            padding: 1.5vh 1vw;
         }
-        @media screen and (min-width: 525px) and (max-width: 800px){
-            margin-bottom: 1.5vw;
-            margin-top: 1vw;
-            padding: 1.2vh .7vw;
+        @media screen and (min-width: 525px) and (max-width: 1000px) {
+            padding: 1.5vh;
         }
         @media screen and (max-width: 525px){
-            margin-top: 1vw;
             padding: 1.2vh 2.5vw;
         }
     }

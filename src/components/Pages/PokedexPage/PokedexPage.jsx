@@ -1,14 +1,14 @@
 import React, { useState, useContext } from "react"
 import { Header } from "../../Header/Header"
 import { GlobalContext } from "../../../context/GlobalContext"
-import {Container, Battle, Winner, ContainerPokedex, LoadingSection, ClearButton} from './style'
+import {PokedexContainer, Container, Battle, Winner, ContainerPokedex, LoadingSection, ClearButton} from './style'
 import PokeCard from "../../PokeCard/PokeCard"
 import Swal from "sweetalert2"
 import useRequestData from "../../../hooks/useRequestData"
 import { baseUrl } from "../../../constants/constants"
 import arrow from '../../../img/arrow.png'
 import loading from '../../../img/loading.png'
-
+import background from '../../../img/background.png'
 
 export function PokedexPage() {
     const [buttonCard] = useState("remove")
@@ -103,7 +103,7 @@ export function PokedexPage() {
     }
     
     return (
-        <>
+        <PokedexContainer background={background}>
             <Header/>
 
             <ContainerPokedex>  
@@ -132,10 +132,10 @@ export function PokedexPage() {
                             <Winner>
                                 {winner !== "Empate!"? <h2>O pokemón {winner.toUpperCase()} ganhou a partida!</h2> : <h2>Empate!</h2>}
                                 {winner === pokemon1 && (
-                                    <img src={dataPokemon1.sprites.front_default} alt={`Foto do pokémon ${winner}`}/>
+                                    <img src={dataPokemon1.sprites.other.home.front_default} alt={`Foto do pokémon ${winner}`}/>
                                 )}
                                 {winner === pokemon2 && (
-                                    <img src={dataPokemon2.sprites.front_default} alt={`Foto do pokémon ${winner}`}/>
+                                    <img src={dataPokemon2.sprites.other.home.front_default} alt={`Foto do pokémon ${winner}`}/>
                                 )}
                                 <button onClick={() => location.reload()}>Voltar</button>
                             </Winner>
@@ -154,6 +154,6 @@ export function PokedexPage() {
                 {pokedexList.length !== 0 && <ClearButton onClick={clearPokedex}>Limpar Pokédex</ClearButton>}            
                 
             </ContainerPokedex>
-        </>
+        </PokedexContainer>
     )
 }

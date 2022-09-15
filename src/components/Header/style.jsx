@@ -1,18 +1,16 @@
 import styled from "styled-components";
 
 export const HeaderSection = styled.header `
-    background-color: var(--light-blue);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-right: 8vw;
+    padding: 5vh 8vw 0 0;
+    margin-bottom: 5vh;
     @media screen and (min-width: 600px) {
         height: 10vh;
-        margin-bottom: 1.5vw;
     }
     @media screen and (max-width: 600px) {
         height: 8vh;
-        margin-bottom: 4vw;
     }
     div {
         display: flex;
@@ -43,8 +41,9 @@ export const HeaderSection = styled.header `
         a {
             color: white;
             text-decoration: none;
+            font-weight: 600;
             :hover {
-                color: var(--light-yellow);
+                color: var(--dark-yellow);
             }
         }
     }

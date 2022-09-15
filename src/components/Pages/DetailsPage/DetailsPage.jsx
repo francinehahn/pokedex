@@ -3,11 +3,11 @@ import { Header } from "../../Header/Header"
 import { useParams } from "react-router-dom";
 import { baseUrl } from "../../../constants/constants";
 import useRequestData from '../../../hooks/useRequestData'
-import { Container, TypesContainer, Loading, TypeList } from "./style";
+import { DetailsContainer, Container, TypesContainer, Loading, TypeList } from "./style";
 import loading from '../../../img/loading.png'
 import { GlobalContext } from '../../../context/GlobalContext'
 import Swal from "sweetalert2";
-import { colours } from "../../../constants/PokemonTypeColors";
+import background from '../../../img/background.png';
 
 
 export function DetailsPage() {
@@ -32,91 +32,91 @@ export function DetailsPage() {
         )
     })
     
-    const listTypes = dataPokemons && dataPokemons.types.map((type, index) => {
-
+    const listTypes = dataPokemons && dataPokemons.types.map((type, index) => {  
+        
         let colorBack
         let colorFont
         switch (type.type.name) {
             case 'normal':
-                colorFont = colours.normal.hex
-                colorBack = colours.normal.rgba
+                colorBack = '#A8A77A'
+                colorFont = '#575501'
                 break;
             case 'fire':
-                colorFont = colours.fire.hex
-                colorBack = colours.fire.rgba
+                colorBack = '#fa2424'
+                colorFont = '#fefbfb'
                 break;
             case 'water':
-                colorFont = colours.water.hex
-                colorBack = colours.water.rgba
+                colorBack = '#6390F0'
+                colorFont = '#0134a1'
                 break;
             case 'electric':
-                colorFont = colours.electric.hex
-                colorBack = colours.electric.rgba
+                colorBack = '#F7D02C'
+                colorFont = '#5f4c01'
                 break;
             case 'grass':
-                colorFont = colours.grass.hex
-                colorBack = colours.grass.rgba
+                colorBack = '#7AC74C'
+                colorFont = '#215801'
                 break;
             case 'ice':
-                colorFont = colours.ice.hex
-                colorBack = colours.ice.rgba
+                colorBack = '#96D9D6'
+                colorFont = '#028982'
                 break;
             case 'fighting':
-                colorFont = colours.fighting.hex
-                colorBack = colours.fighting.rgba
+                colorBack = '#C22E28'
+                colorFont = '#ffffff'
                 break;
             case 'poison':
-                colorFont = colours.poison.hex
-                colorBack = colours.poison.rgba
+                colorBack = '#A33EA1'
+                colorFont = '#ffffff'
                 break;
             case 'ground':
-                colorFont = colours.ground.hex
-                colorBack = colours.ground.rgba
+                colorBack = '#E2BF65'
+                colorFont = '#735302'
                 break;
             case 'flying':
-                colorFont = colours.flying.hex
-                colorBack = colours.flying.rgba
+                colorBack = '#A98FF3'
+                colorFont = '#4000ef'
                 break;
             case 'psychic':
-                colorFont = colours.psychic.hex
-                colorBack = colours.psychic.rgba
+                colorBack = '#F95587'
+                colorFont = '#7f0228'
                 break;
             case 'bug':
-                colorFont = colours.bug.hex
-                colorBack = colours.bug.rgba
+                colorBack = '#A6B91A'
+                colorFont = '#4f5901'
                 break;
             case 'rock':
-                colorFont = colours.rock.hex
-                colorBack = colours.rock.rgba
+                colorBack = '#B6A136'
+                colorFont = '#5a4b02'
                 break;
             case 'ghost':
-                colorFont = colours.ghost.hex
-                colorBack = colours.ghost.rgba
+                colorBack = '#735797'
+                colorFont = '#250154'
                 break;
             case 'dragon':
-                colorFont = colours.dragon.hex
-                colorBack = colours.dragon.rgba
+                colorBack = '#6F35FC'
+                colorFont = '#180151'
                 break;
             case 'dark':
-                colorFont = colours.dark.hex
-                colorBack = colours.dark.rgba
+                colorBack = '#705746'
+                colorFont = '#421b00'
                 break;
             case 'steel':
-                colorFont = colours.steel.hex
-                colorBack = colours.steel.rgba
+                colorBack = '#B7B7CE'
+                colorFont = '#3d3dd7'
                 break;
             case 'fairy':
-                colorFont = colours.fairy.hex
-                colorBack = colours.fairy.rgba
+                colorBack = '#D685AD'
+                colorFont = '#d61c79'
                 break;
             default:
-                colorFont = '#000'
                 colorBack = '#000'
+                colorFont= '#e7e4e4'
                 break;
         }
 
         return (
-            <TypeList color={colorFont} background={colorBack} key={index}> 
+            <TypeList background={colorBack} color={colorFont} key={index}> 
                 <p> {type.type.name.toUpperCase()} </p>
             </TypeList>
         )
@@ -158,7 +158,7 @@ export function DetailsPage() {
     }
 
     return (
-        <>
+        <DetailsContainer background={background}>
             <Header/>            
             {isLoadingPokemons && <Loading src={loading} alt={'Ícone de uma meia lua rodando'}/>}
             {!isLoadingPokemons && errorPokemons && <p>Ocorreu um erro: {errorPokemons}</p>}
@@ -170,10 +170,7 @@ export function DetailsPage() {
                         <ul>{listTypes}</ul>
                     </TypesContainer>
                     <Container>
-                        <picture>
-                            <img src={dataPokemons.sprites.front_default} alt="Foto do pokémon de frente"/>
-                            <img src={dataPokemons.sprites.back_default} alt="Foto do pokémon de costas"/>
-                        </picture>
+                        <img src={dataPokemons.sprites.other.home.front_default} alt="Foto do pokémon de frente"/>
                         <div>
                             <h2>Stats</h2>
                             {!isLoadingPokemons && dataPokemons && (
@@ -191,6 +188,6 @@ export function DetailsPage() {
                     </Container>
                 </>
             )}
-        </>
+        </DetailsContainer>
     )
 }

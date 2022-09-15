@@ -46,7 +46,7 @@ const PokeCard=({pokemon, buttonCard})=>{
 
     return(
         <Card>   
-            {!isLoading && dataPokemon && <img src={dataPokemon.sprites.front_default} alt={`Imagem do pokémon ${pokemon.name}`}/>}
+            {!isLoading && dataPokemon && <img src={dataPokemon.sprites.other.home.front_default} alt={`Imagem do pokémon ${pokemon.name}`}/>}
             <p><strong>{pokemon.name.toUpperCase()}</strong></p>
             <ButtonsCard>
                 <button onClick={()=>{navigate(`/detalhes/${pokemon.name}`)}}>Ver mais</button>
