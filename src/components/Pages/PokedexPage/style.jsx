@@ -194,7 +194,6 @@ export const LoadingSection = styled.div `
     min-width: 100vw;
     img {
         display: block;
-        margin: 30vh auto;
         @keyframes rotate {
             from {transform: rotate(0)}
             to {transform: rotate(360deg)}
@@ -204,9 +203,11 @@ export const LoadingSection = styled.div `
         
         @media screen and (min-width: 1000px) {
             width: 5%;
+            margin: 30vh auto;
         }
         @media screen and (min-width: 320px) and (max-width: 1000px) {
             width: 10%;
+            margin: 25vh auto;
         }
     }
 `
