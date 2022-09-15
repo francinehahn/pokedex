@@ -8,12 +8,65 @@ export const PokedexContainer = styled.section `
     min-height: 100vh;
 `
 
-export const ContainerPokedex= styled.section`
+export const ContainerPokedex= styled.section `
     display: flex;
     flex-direction: column;
     align-items: center;
     h2 {
         margin-top: 8vh;
+    }
+`
+
+export const Buttons = styled.div `
+    display: flex;
+    align-items: center;
+    button {
+        :nth-child(1) {
+            @media screen and (min-width: 1200px) {
+                margin-right: 41vw;
+                margin-left: 43vw;                
+            }
+            @media screen and (min-width: 800px) and (max-width: 1200px) {
+                margin-right: 38vw;
+                margin-left: 41vw;                
+            }
+            @media screen and (min-width: 565px) and (max-width: 800px) {
+                margin-right: 33vw;
+                margin-left: 38vw;                
+            }
+            @media screen and (min-width: 530px) and (max-width: 565px) {
+                margin-right: 32vw;
+                margin-left: 38vw;                
+            }
+            @media screen and (min-width: 400px) and (max-width: 530px) {
+                margin-right: 26vw;
+                margin-left: 33vw;                
+            }
+            @media screen and (max-width: 400px) {
+                margin-right: 20vw;
+                margin-left: 30vw;                
+            }
+        }
+        :nth-child(2) {
+            @media screen and (min-width: 1200px) {
+                padding: 1.3vh 1vw;
+            }
+            @media screen and (min-width: 900px) and (max-width: 1200px){
+                padding: 1.3vh 1.3vw;
+            }
+            @media screen and (min-width: 750px) and (max-width: 900px){
+                padding: 1.3vh 1.6vw;
+            }
+            @media screen and (min-width: 600px) and (max-width: 750px){
+                padding: 1.3vh 1.8vw;
+            }
+            @media screen and (min-width: 500px) and (max-width: 600px){
+                padding: 1.3vh 2.4vw;
+            }
+            @media screen and (max-width: 500px){
+                padding: 1.2vh 3.2vw;
+            }
+        }
     }
 `
 
@@ -38,36 +91,52 @@ export const Container = styled.section `
 `
 
 export const Battle = styled.form `
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5vw;
-    margin: 2vh 0 2vh 4.7vw;
-    padding: 3vh 0;
-    width: 95%;
-    select {
-        padding: 1vh 1vw;
-        border: none;
-    }
-    img {
-        cursor: pointer;
-        @media screen and (min-width: 1000px) {
-            width: 3.3%;
-        }
-        @media screen and (min-width: 800px) and (max-width: 1000px) {
-            width: 5%;
-        }
-        @media screen and (min-width: 600px) and (max-width: 800px) {
-            width: 6%;
-        }
-        @media screen and (min-width: 500px) and (max-width: 600px) {
-            width: 7%;
-        }
-        @media screen and (max-width: 500px) {
-            width: 8%;
-        }
-        :hover {
-            opacity: .8;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1vw;
+            @media screen and (min-width: 1200px) {
+                margin: 4vh 0 0 2.5vw;
+            }
+            @media screen and (min-width: 520px) and (max-width: 1200px) {
+                margin: 4vh 0 0 4.3vw;
+            }
+            @media screen and (max-width: 520px) {
+                margin: 4vh 0 0 8vw;
+            }
+            select {
+                padding: 1vh 1vw;
+                border: none;
+            }
+            span {
+                color: white;
+            }
+            img {
+                cursor: pointer;
+                @media screen and (min-width: 1000px) {
+                    width: 5%;
+                }
+                @media screen and (min-width: 800px) and (max-width: 1000px) {
+                    width: 5%;
+                }
+                @media screen and (min-width: 600px) and (max-width: 800px) {
+                    width: 6%;
+                }
+                @media screen and (min-width: 500px) and (max-width: 600px) {
+                    width: 7%;
+                }
+                @media screen and (max-width: 500px) {
+                    width: 8%;
+                }
+                :hover {
+                    opacity: .8;
+                }
+            }
         }
     }
 `
@@ -116,14 +185,11 @@ export const Winner = styled.section `
     }
 `
 
-export const ClearButton = styled.button `
-    margin-bottom: 3vh;
-`
-
 export const LoadingSection = styled.div `
     background-color: var(--light-blue);
     position: absolute;
     top: 0;
+    left: 0;
     min-height: 100vh;
     min-width: 100vw;
     img {
@@ -137,10 +203,10 @@ export const LoadingSection = styled.div `
         animation: rotate 1s infinite;
         
         @media screen and (min-width: 1000px) {
-            width: 4%;
+            width: 5%;
         }
         @media screen and (min-width: 320px) and (max-width: 1000px) {
-            width: 15%;
+            width: 10%;
         }
     }
 `

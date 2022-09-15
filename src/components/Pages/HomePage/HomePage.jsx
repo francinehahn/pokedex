@@ -10,9 +10,10 @@ import arrow from '../../../img/arrow.png'
 import arrowLeft from '../../../img/arrow-left.png'
 import background from '../../../img/background.png'
 
+
 export function HomePage() {
     const [offset, setOffset] = useState(0)
-    const [dataPokemons, errorPokemons, isLoadingPokemons] = useRequestData(`${baseUrl}?limit=18&offset=${offset}`)
+    const [dataPokemons, errorPokemons, isLoadingPokemons] = useRequestData(`${baseUrl}?limit=20&offset=${offset}`)
     const {pokedexList} = useContext(GlobalContext)
     const [buttonCard] = useState("add")
     const [page, setPage] = useState(1)
@@ -35,22 +36,22 @@ export function HomePage() {
     }
 
     //Lógica dos botões que ficam na parte inferior da página
-    const totalOffset = dataPokemons && (Number(dataPokemons.count) - 18)
+    const totalOffset = dataPokemons && (Number(dataPokemons.count) - 20)
 
     const NextPage = () => {
-        setOffset(offset + 18)
+        setOffset(offset + 20)
         setPage(Number(page) + 1)
     }
 
     const PreviousPage = () => {
-        setOffset(offset - 18)
+        setOffset(offset - 20)
         setPage(Number(page) - 1)
     }
 
     const ChoosePage = (e) => {
         e.preventDefault()
         setPage(page)
-        setOffset((page - 1) * 18)
+        setOffset((page - 1) * 20)
     }
 
     let buttons
