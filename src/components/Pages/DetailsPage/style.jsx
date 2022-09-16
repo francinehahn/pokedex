@@ -13,14 +13,14 @@ export const Container = styled.section `
     justify-content: center;
     margin: 0 6vw;
     padding-bottom: 5vh;
-    @media screen and (min-width: 1000px) {
-        gap: 15vw;   
+    @media screen and (min-width: 1200px) {
+        gap: 8vw;   
     }
-    @media screen and (min-width: 800px) and (max-width: 1000px) {
-        gap: 10vw;   
+    @media screen and (min-width: 1000px) and (max-width: 1200px) {
+        gap: 6vw;   
     }
-    @media screen and (max-width: 800px) {
-        gap: 5vw;   
+    @media screen and (max-width: 1000px) {
+        gap: 4vw;   
     }
     img {
         @media screen and (min-width: 1300px) {
@@ -28,24 +28,25 @@ export const Container = styled.section `
             height: 20%;
             margin-top: 4vh;
         }
-        @media screen and (min-width: 850px) and (max-width: 1300px) {
+        @media screen and (min-width: 701px) and (max-width: 1300px) {
             width: 20%;
             height: 25%;
             margin-top: 5vh;
         }
-        @media screen and (min-width: 500px) and (max-width: 850px) {
-            margin: 5vh 15vw 0 0;
+        @media screen and (min-width: 500px) and (max-width: 700px) {
             width: 30%;
             height: 35%;
         }
         @media screen and (min-width: 420px) and (max-width: 500px) {
             width: 40%;
             height: 45%;
-            margin: 6vh 4vw 0 0;
         }
         @media screen and (max-width: 420px) {
             width: 50%;
             height: 55%;
+        }
+        @media screen and (max-width: 1000px) {
+            margin-right: 5vw;
         }
     }
     div {
@@ -137,6 +138,26 @@ export const TypeList = styled.li `
         @media screen and (max-width: 525px){
             min-width: 20vw;
         }
+`
+
+export const PokemonStats = styled.section `
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    li {
+        display: flex;
+        gap: .5vw;
+    }
+    div {
+        background-color: #ffffff;
+        width: 180px;
+        height: 6px;
+        div {
+            background-color: var(--dark-yellow);
+            width: ${props => props.percentage}%;
+            height: 6px;
+        }
+    }
 `
 
 export const Loading = styled.img `

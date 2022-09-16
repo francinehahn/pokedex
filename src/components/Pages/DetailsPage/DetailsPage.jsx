@@ -3,7 +3,7 @@ import { Header } from "../../Header/Header"
 import { useParams } from "react-router-dom";
 import { baseUrl } from "../../../constants/constants";
 import useRequestData from '../../../hooks/useRequestData'
-import { DetailsContainer, Container, TypesContainer, Loading, TypeList } from "./style";
+import { DetailsContainer, Container, TypesContainer, Loading, TypeList, PokemonStats } from "./style";
 import logo from '../../../img/logo.png'
 import { GlobalContext } from '../../../context/GlobalContext'
 import Swal from "sweetalert2";
@@ -23,15 +23,28 @@ export function DetailsPage() {
         listOfNames.push(pokedexList[i].name)
     }
 
-    //Pegando os detalhes de cada pokémon
+    //Pegando as stats de cada pokémon e a soma das stats
     let sum = []
     const listStats = dataPokemons && dataPokemons.stats.map((stat, index) => {
         sum.push(stat.base_stat)
+        const bar = (stat.base_stat / 200) * 100
         return (
-            <li key={index}><strong><span>{stat.stat.name.toUpperCase()}:</span></strong> {stat.base_stat}</li>
+            <PokemonStats percentage={bar}>
+                <li key={index}>
+                    <strong>{stat.stat.name.toUpperCase()}:</strong> {stat.base_stat}
+                </li>
+                <div>
+                    <div>
+                    </div>
+                </div>
+            </PokemonStats>
         )
     })
     
+    //Soma das stats
+    const sumStats = sum.reduce((prev, num) => parseInt(prev) + parseInt(num), 0)
+
+    //Tipos dos pokemons e cores de acordo com cada tipo
     const listTypes = dataPokemons && dataPokemons.types.map((type, index) => {  
         
         let colorBack
@@ -123,16 +136,15 @@ export function DetailsPage() {
     })
 
 
+    //Movimentos de cada pokemon
     const listMoves = dataPokemons && dataPokemons.moves.map((move, index) => {
         return (
             <li key={index}>{move.move.name.toUpperCase()}</li>
         )
     })
 
-    //Soma das stats
-    const sumStats = sum.reduce((prev, num) => parseInt(prev) + parseInt(num), 0)
 
-    //Adicionar ou remover pokémon da pokedéx
+    //Adicionar ou remover pokémon da pokédex
     const addOrRemove = () => {
         if(listOfNames.includes(pokemon)) {
             const remove = pokedexList.filter((item) => {
@@ -177,7 +189,12 @@ export function DetailsPage() {
                                 <>
                                     <ul>{listStats}</ul>
                                     <hr/>
-                                    <p><strong>SOMA:</strong> {sumStats}</p>
+                                    <PokemonStats percentage={(sumStats / 1200) * 100}>
+                                        <p><strong>SOMA:</strong> {sumStats}</p>
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </PokemonStats>
                                 </>
                             )}
                         </div>    
