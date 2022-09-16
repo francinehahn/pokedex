@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useState, useContext } from "react"
 import { Header } from "../../Header/Header"
 import { GlobalContext } from "../../../context/GlobalContext"
 import {PokedexContainer, Buttons, Container, Battle, Winner, ContainerPokedex, LoadingSection} from './style'

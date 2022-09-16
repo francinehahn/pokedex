@@ -23,18 +23,29 @@ export const Container = styled.section `
         gap: 5vw;   
     }
     img {
-        @media screen and (min-width: 850px) {
+        @media screen and (min-width: 1300px) {
+            width: 15%;
+            height: 20%;
+            margin-top: 4vh;
+        }
+        @media screen and (min-width: 850px) and (max-width: 1300px) {
             width: 20%;
             height: 25%;
+            margin-top: 5vh;
         }
         @media screen and (min-width: 500px) and (max-width: 850px) {
-            margin-right: 15vw;
-            width: 35%;
-            height: 40%;
+            margin: 5vh 15vw 0 0;
+            width: 30%;
+            height: 35%;
         }
-        @media screen and (max-width: 500px) {
-            width: 45%;
-            height: 50%;
+        @media screen and (min-width: 420px) and (max-width: 500px) {
+            width: 40%;
+            height: 45%;
+            margin: 6vh 4vw 0 0;
+        }
+        @media screen and (max-width: 420px) {
+            width: 50%;
+            height: 55%;
         }
     }
     div {
@@ -71,7 +82,7 @@ export const TypesContainer = styled.div`
     justify-content: center;
     gap: 5vw;
     @media screen and (min-width: 1000px) {
-        margin: 5vh 0;
+        margin: 7vh 0;
     }
     @media screen and (max-width: 1000px) {
         margin: 7vh 0 5vh 0;
@@ -82,7 +93,25 @@ export const TypesContainer = styled.div`
         justify-content: center;
     }
     button {
-        padding: 1.5vh;
+        font-size: 21px;
+        @media screen and (min-width: 1230px) {
+            padding: .8vh 1.1vw;   
+        }
+        @media screen and (min-width: 900px) and (max-width: 1230px) {
+            padding: .8vh 1.3vw;   
+        }
+        @media screen and (min-width: 700px) and (max-width: 900px) {
+            padding: .8vh 1.7vw;   
+        }
+        @media screen and (min-width: 570px) and (max-width: 700px) {
+            padding: .8vh 2.2vw;   
+        }
+        @media screen and (min-width: 490px) and (max-width: 570px) {
+            padding: .7vh 2.5vw;   
+        }
+        @media screen and (max-width: 490px) {
+            padding: .6vh 2.8vw;   
+        }
     }
 `
 
@@ -112,7 +141,7 @@ export const TypeList = styled.li `
 
 export const Loading = styled.img `
     display: block;
-    margin: 12vh auto;
+    margin: 26vh auto;
     @keyframes rotate {
         from {transform: rotate(0)}
         to {transform: rotate(360deg)}

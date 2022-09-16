@@ -20,7 +20,12 @@ export const Container = styled.main `
     font-family: 'Montserrat', sans-serif;
     p, li, select {
         line-height: 4vh;
-        font-size: 16px;
+        @media screen and (min-width: 500px) {
+            font-size: 16px;
+        }
+        @media screen and (max-width: 500px) {
+            font-size: 14px;
+        }
     }
     ul {
         list-style: none;
@@ -64,15 +69,6 @@ export const Container = styled.main `
         border: none;
         :hover {
             opacity: .8;
-        }
-        @media screen and (min-width: 1000px){
-            padding: 1.5vh 1vw;
-        }
-        @media screen and (min-width: 525px) and (max-width: 1000px) {
-            padding: 1.5vh;
-        }
-        @media screen and (max-width: 525px){
-            padding: 1.2vh 2.5vw;
         }
     }
 `

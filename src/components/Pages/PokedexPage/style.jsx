@@ -20,31 +20,43 @@ export const ContainerPokedex= styled.section `
 export const Buttons = styled.div `
     display: flex;
     align-items: center;
+    margin-top: 4vh;
     button {
         :nth-child(1) {
             @media screen and (min-width: 1200px) {
+                padding: 1.3vh 1vw;
                 margin-right: 41vw;
                 margin-left: 43vw;                
             }
             @media screen and (min-width: 800px) and (max-width: 1200px) {
+                padding: 1.3vh 1vw;
                 margin-right: 38vw;
                 margin-left: 41vw;                
             }
-            @media screen and (min-width: 565px) and (max-width: 800px) {
+            @media screen and (min-width: 700px) and (max-width: 800px) {
+                padding: 1.3vh 1vw;
+                margin-right: 34vw;
+                margin-left: 40vw;                
+            }
+            @media screen and (min-width: 600px) and (max-width: 700px) {
+                padding: 1.3vh 1vw;
                 margin-right: 33vw;
                 margin-left: 38vw;                
             }
-            @media screen and (min-width: 530px) and (max-width: 565px) {
-                margin-right: 32vw;
+            @media screen and (min-width: 530px) and (max-width: 600px) {
+                padding: 1.3vh 1vw;
+                margin-right: 31vw;
                 margin-left: 38vw;                
             }
-            @media screen and (min-width: 400px) and (max-width: 530px) {
+            @media screen and (min-width: 430px) and (max-width: 530px) {
+                padding: 1.3vh 1.2vw;
                 margin-right: 26vw;
-                margin-left: 33vw;                
+                margin-left: 35vw;                
             }
-            @media screen and (max-width: 400px) {
-                margin-right: 20vw;
-                margin-left: 30vw;                
+            @media screen and (max-width: 430px) {
+                padding: 1.3vh 1.2vw;
+                margin-right: 25vw;
+                margin-left: 32vw;                
             }
         }
         :nth-child(2) {
@@ -61,10 +73,10 @@ export const Buttons = styled.div `
                 padding: 1.3vh 1.8vw;
             }
             @media screen and (min-width: 500px) and (max-width: 600px){
-                padding: 1.3vh 2.4vw;
+                padding: 1.2vh 2.4vw;
             }
             @media screen and (max-width: 500px){
-                padding: 1.2vh 3.2vw;
+                padding: 1.1vh 3.2vw;
             }
         }
     }
@@ -99,15 +111,17 @@ export const Battle = styled.form `
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 1vw;
             @media screen and (min-width: 1200px) {
                 margin: 4vh 0 0 2.5vw;
+                gap: 1vw;
             }
             @media screen and (min-width: 520px) and (max-width: 1200px) {
                 margin: 4vh 0 0 4.3vw;
+                gap: 1.5vw;
             }
             @media screen and (max-width: 520px) {
                 margin: 4vh 0 0 8vw;
+                gap: 2vw;
             }
             select {
                 padding: 1vh 1vw;
@@ -151,11 +165,12 @@ export const Winner = styled.section `
     h2 {
         color: white;
         text-align: center;
-        padding-top: 15vh;
+        margin: 22vh 2vw 0 2vw;
+        line-height: 4vh;
     }
     img {
         display: block;
-        margin: 2vh auto 0 auto;
+        margin: 5vh auto 0 auto;
         @media screen and (min-width: 1100px) {
             width: 12%;
         }
@@ -180,8 +195,8 @@ export const Winner = styled.section `
     }
     button {
         display: block;
-        padding: 1.5vh 2vw;
-        margin: 10vh auto;
+        padding: 1.7vh 2vw;
+        margin: 6vh auto;
     }
 `
 
@@ -190,8 +205,8 @@ export const LoadingSection = styled.div `
     position: absolute;
     top: 0;
     left: 0;
-    min-height: 100vh;
-    min-width: 100vw;
+    height: 100vh;
+    width: 100vw;
     img {
         display: block;
         @keyframes rotate {
@@ -202,12 +217,12 @@ export const LoadingSection = styled.div `
         animation: rotate 1s infinite;
         
         @media screen and (min-width: 1000px) {
-            width: 5%;
-            margin: 30vh auto;
+            width: 7%;
+            margin: 25vh auto;
         }
         @media screen and (min-width: 320px) and (max-width: 1000px) {
             width: 10%;
-            margin: 25vh auto;
+            margin: 5vh auto;
         }
     }
 `

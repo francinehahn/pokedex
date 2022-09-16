@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Header } from "../../Header/Header"
 import PokeCard from "../../PokeCard/PokeCard";
 import { HomeContainer, ButtonsPage, CardsContainer, Loading } from "./style";
-import loading from '../../../img/loading.png'
+import logo from '../../../img/logo.png'
 import { GlobalContext } from "../../../context/GlobalContext";
 import useRequestData from "../../../hooks/useRequestData";
 import { baseUrl } from "../../../constants/constants";
@@ -83,7 +83,7 @@ export function HomePage() {
         <HomeContainer background={background}>
             <Header/>
 
-            {isLoadingPokemons && <Loading src={loading} alt={'Ícone de uma meia lua rodando'}/>}
+            {isLoadingPokemons && <Loading src={logo} alt={'Ícone de uma meia lua rodando'}/>}
 
             <CardsContainer>
                 {!isLoadingPokemons && dataPokemons && pokemons()}

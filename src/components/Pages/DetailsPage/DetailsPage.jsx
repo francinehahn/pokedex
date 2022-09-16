@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { baseUrl } from "../../../constants/constants";
 import useRequestData from '../../../hooks/useRequestData'
 import { DetailsContainer, Container, TypesContainer, Loading, TypeList } from "./style";
-import loading from '../../../img/loading.png'
+import logo from '../../../img/logo.png'
 import { GlobalContext } from '../../../context/GlobalContext'
 import Swal from "sweetalert2";
 import background from '../../../img/background.png';
@@ -160,12 +160,12 @@ export function DetailsPage() {
     return (
         <DetailsContainer background={background}>
             <Header/>            
-            {isLoadingPokemons && <Loading src={loading} alt={'Ícone de uma meia lua rodando'}/>}
+            {isLoadingPokemons && <Loading src={logo} alt={'Ícone do logo girando'}/>}
             {!isLoadingPokemons && errorPokemons && <p>Ocorreu um erro: {errorPokemons}</p>}
             {!isLoadingPokemons && dataPokemons && (
                 <>
                     <TypesContainer>
-                        <button onClick={addOrRemove}>{listOfNames.includes(pokemon)? "Remover" : "Adicionar"}</button>
+                        <button onClick={addOrRemove}>{listOfNames.includes(pokemon)? "x" : "+"}</button>
                         <h1>{dataPokemons.name.toUpperCase()}</h1>
                         <ul>{listTypes}</ul>
                     </TypesContainer>

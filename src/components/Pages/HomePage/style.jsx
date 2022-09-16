@@ -61,7 +61,6 @@ export const ButtonsPage = styled.div`
 
 export const Loading = styled.img `
     display: block;
-    margin: 25vh auto;
     @keyframes rotate {
         from {transform: rotate(0)}
         to {transform: rotate(360deg)}
@@ -69,10 +68,12 @@ export const Loading = styled.img `
     
     animation: rotate 1s infinite;
     
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 900px) {
         width: 5%;
+        margin: 28vh auto;
     }
-    @media screen and (min-width: 320px) and (max-width: 1000px) {
-        width: 15%;
+    @media screen and (min-width: 320px) and (max-width: 900px) {
+        width: 13%;
+        margin: 35vh auto;
     }
 `

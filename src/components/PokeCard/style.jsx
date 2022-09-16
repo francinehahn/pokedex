@@ -88,4 +88,15 @@ export const ButtonsCard = styled.div`
     @media screen and (max-width: 525px){
         margin-bottom: 2vh;
     }
+    button {
+        @media screen and (min-width: 900px) {
+            padding: 1.3vh 1vw;            
+        }
+        @media screen and (min-width: 530px) and (max-width: 900px) {
+            padding: 1.3vh 1.3vw;            
+        }
+        @media screen and (max-width: 530px) {
+            padding: 1.1vh 1.5vw;            
+        }
+    }
 `
