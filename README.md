@@ -21,6 +21,7 @@ https://wrong-quicksand.surge.sh/
 - O projeto é responsivo para todos em tamanhos de tela. 
 
 ## Imagens:
+### Versão desktop:
 ![print1](./src/img/print1.png)
 
 
@@ -32,3 +33,4 @@ https://wrong-quicksand.surge.sh/
 
 ![print4](./src/img/print4.png)
 
+### Versão mobile:
