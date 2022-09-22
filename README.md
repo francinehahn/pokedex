@@ -36,14 +36,14 @@ https://wrong-quicksand.surge.sh/
 
 ### Versão mobile:
 
-![print5](./src/img/print5.jpeg)
+<img src='./src/img/print5.jpeg' width="50%"/>
 <br>
 
-![print6](./src/img/print6.jpeg)
+<img src='./src/img/print6.jpeg' width="50%"/>
 <br>
 
-![print7](./src/img/print7.jpeg)
+<img src='./src/img/print7.jpeg' width="50%"/>
 <br>
 
-![print8](./src/img/print8.jpeg)
+<img src='./src/img/print8.jpeg' width="50%"/>
 <br>
