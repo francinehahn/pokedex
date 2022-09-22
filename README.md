@@ -20,6 +20,18 @@ https://wrong-quicksand.surge.sh/
 - Botão "iniciar batalha": usuário pode selecionar 2 pokémons para se enfrentar; o pokémon com maior soma das stats vence;
 - O projeto é responsivo para todos em tamanhos de tela. 
 
+## Installing
+<pre>
+  <code>
+    $ git clone https://github.com/francinehahn/pokedex.git
+    cd pokedex
+  </code>
+</pre>
+
+<pre>
+  <code>$ npm install</code>
+</pre>
+
 ## Imagens:
 
 ### Versão desktop:
