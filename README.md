@@ -24,25 +24,26 @@ https://wrong-quicksand.surge.sh/
 
 ### Versão desktop:
 ![print1](./src/img/print1.png)
-
+<br>
 
 ![print2](./src/img/print2.png)
-
+<br>
 
 ![print3](./src/img/print3.png)
-
+<br>
 
 ![print4](./src/img/print4.png)
 
 ### Versão mobile:
 
-![print5](./src/img/print5.png)
+![print5](./src/img/print5.jpeg)
+<br>
 
+![print6](./src/img/print6.jpeg)
+<br>
 
-![print6](./src/img/print6.png)
+![print7](./src/img/print7.jpeg)
+<br>
 
-
-![print7](./src/img/print7.png)
-
-
-![print8](./src/img/print8.png)
+![print8](./src/img/print8.jpeg)
+<br>
