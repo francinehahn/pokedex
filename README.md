@@ -24,8 +24,11 @@ https://wrong-quicksand.surge.sh/
 <pre>
   <code>
     $ git clone https://github.com/francinehahn/pokedex.git
-    cd pokedex
   </code>
+</pre>
+
+<pre>
+  <code>$ cd pokedex</code>
 </pre>
 
 <pre>
