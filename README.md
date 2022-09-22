@@ -22,9 +22,7 @@ https://wrong-quicksand.surge.sh/
 
 ## Installing
 <pre>
-  <code>
-    $ git clone https://github.com/francinehahn/pokedex.git
-  </code>
+  <code>$ git clone https://github.com/francinehahn/pokedex.git</code>
 </pre>
 
 <pre>
