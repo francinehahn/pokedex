@@ -1,24 +1,23 @@
 ![PokedexCover](./src/img/pokédexCover.png)
 
 # POKEDEX
-Este projeto foi desenvolvido como parte da fixação de conteúdo de ReactJS do curso de Web Full Stack da Labenu, e foi realizado utilizando a API pública PokéAPI. O projeto consiste em uma aplicação em que o usuário pode visualizar todos os tipos de Pokémons, e incluí-los em sua Pokédex. Na página inicial, é possível visualizar uma lista de Pokémons, selecionar para ver os detalhes de cada um deles (abrir página de detalhes), e adicioná-los em sua Pokédex. Já na página Pokédex, também é possível clicar para ver os detalhes do Pokémon, removê-lo da Pokédex, bem como iniciar uma batalha entre os Pokémons que estão na Pokédex.
+This project was developed with the intent to practice ReactJS and API consumption. The API used was the PokéAPI. In the home page, the user can see all the Pokémons, select them to get more information about their strengths and moves, and add them to their Pokédex. In the Pokédex page, the user can still see the Pokémon's details and remove them from their Pokédex. On the top of the page, it is possible to select 2 Pokémons from the Pokédex to battle against each other.
 
-## Quem fez?
+## Who made this project?
 [Francine Hahn](https://github.com/francinehahn) <br>
 [Giovana Vieira](https://github.com/gioivieira) <br>
 [Maria Ferro](https://github.com/mariafmf)
 
-## Link do Surge:
+## Link to access the project:
 https://wrong-quicksand.surge.sh/
 
-## Funcionalidades:
-- Requisição de todos os pokémons disponíveis na API;
-- Botão "adicionar à pokédex" e "ver mais" em cada card de pokémon;
-- Ao adicionar pokémon à pokédex, ele fica salvo no local storage e deixa de ser renderizado na página inicial;
-- Botão "remover da pokedéx": pokémon deixa de ser renderizado na pokédex e volta para a página inicial;
-- Botão "limpar pokédex": exclui todos os pokémons da pokédex;
-- Botão "iniciar batalha": usuário pode selecionar 2 pokémons para se enfrentar; o pokémon com maior soma das stats vence;
-- O projeto é responsivo para todos em tamanhos de tela. 
+## Functionalities:
+- Request of all the available Pokémons in the API;
+- A button "add to the pokédex" and another button "see more" in each of the pokémon's card;
+- When adding or deleting a pokémon to/from the pokédex, the information is saved on the local storage;
+- A button "clear pokédex" that removes all the pokémons from the pokédex;
+- A button "start battle" that allows the user to select 2 pokémons to battle against each other; the pokémon with a higher score wins;
+- This project is responsive to all screen sizes. 
 
 ## Installing
 <pre>
@@ -33,9 +32,9 @@ https://wrong-quicksand.surge.sh/
   <code>$ npm install</code>
 </pre>
 
-## Imagens:
+## Images:
 
-### Versão desktop:
+### Desktop version:
 ![print1](./src/img/print1.png)
 <br>
 
@@ -47,7 +46,7 @@ https://wrong-quicksand.surge.sh/
 
 ![print4](./src/img/print4.png)
 
-### Versão mobile:
+### Mobile version:
 
 <img src='./src/img/print5.jpeg' width="50%"/>
 <br>
