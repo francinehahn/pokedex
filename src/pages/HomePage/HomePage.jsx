@@ -1,14 +1,14 @@
-import React, { useContext, useState } from "react";
-import { Header } from "../../Header/Header"
-import PokeCard from "../../PokeCard/PokeCard";
-import { HomeContainer, ButtonsPage, CardsContainer, Loading } from "./style";
-import logo from '../../../img/logo.png'
-import { GlobalContext } from "../../../context/GlobalContext";
-import useRequestData from "../../../hooks/useRequestData";
-import { baseUrl } from "../../../constants/constants";
-import arrow from '../../../img/arrow.png'
-import arrowLeft from '../../../img/arrow-left.png'
-import background from '../../../img/background.png'
+import React, { useContext, useState } from "react"
+import { Header } from "../../components/Header/Header"
+import PokeCard from "../../components/PokeCard/PokeCard"
+import { HomeContainer, ButtonsPage, CardsContainer, Loading } from "./style"
+import logo from '../../img/logo.png'
+import { GlobalContext } from "../../context/GlobalContext"
+import useRequestData from "../../hooks/useRequestData"
+import { baseUrl } from "../../constants/constants"
+import arrow from '../../img/arrow.png'
+import arrowLeft from '../../img/arrow-left.png'
+import background from '../../img/background.png'
 
 
 export function HomePage() {

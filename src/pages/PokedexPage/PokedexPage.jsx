@@ -1,14 +1,14 @@
 import React, { useState, useContext } from "react"
-import { Header } from "../../Header/Header"
-import { GlobalContext } from "../../../context/GlobalContext"
+import { Header } from "../../components/Header/Header"
+import { GlobalContext } from "../../context/GlobalContext"
 import {PokedexContainer, Buttons, Container, Battle, Winner, ContainerPokedex, LoadingSection} from './style'
-import PokeCard from "../../PokeCard/PokeCard"
+import PokeCard from "../../components/PokeCard/PokeCard"
 import Swal from "sweetalert2"
-import useRequestData from "../../../hooks/useRequestData"
-import { baseUrl } from "../../../constants/constants"
-import arrow from '../../../img/arrow.png'
-import logo from '../../../img/logo.png'
-import background from '../../../img/background.png'
+import useRequestData from "../../hooks/useRequestData"
+import { baseUrl } from "../../constants/constants"
+import arrow from '../../img/arrow.png'
+import logo from '../../img/logo.png'
+import background from '../../img/background.png'
 
 
 export function PokedexPage() {

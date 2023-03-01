@@ -1,18 +1,18 @@
 import React, { useContext } from "react"
-import { Header } from "../../Header/Header"
-import { useParams } from "react-router-dom";
-import { baseUrl } from "../../../constants/constants";
-import useRequestData from '../../../hooks/useRequestData'
-import { DetailsContainer, Container, TypesContainer, Loading, TypeList, PokemonStats } from "./style";
-import logo from '../../../img/logo.png'
-import { GlobalContext } from '../../../context/GlobalContext'
-import Swal from "sweetalert2";
-import background from '../../../img/background.png';
+import { Header } from "../../components/Header/Header"
+import { useParams } from "react-router-dom"
+import { baseUrl } from "../../constants/constants"
+import useRequestData from '../../hooks/useRequestData'
+import { DetailsContainer, Container, TypesContainer, Loading, TypeList, PokemonStats } from "./style"
+import logo from '../../img/logo.png'
+import { GlobalContext } from '../../context/GlobalContext'
+import Swal from "sweetalert2"
+import background from '../../img/background.png'
 
 
 export function DetailsPage() {
 
-    const pathParams = useParams();
+    const pathParams = useParams()
     const pokemon = pathParams.name
     const {pokedexList, setPokedexList} = useContext(GlobalContext)
     const [dataPokemons, errorPokemons, isLoadingPokemons] = useRequestData(`${baseUrl}/${pokemon}`)
