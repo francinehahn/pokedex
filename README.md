@@ -19,6 +19,13 @@ https://wrong-quicksand.surge.sh/
 - A button "start battle" that allows the user to select 2 pokémons to battle against each other; the pokémon with a higher score wins;
 - This project is responsive to all screen sizes. 
 
+## Technologies used:
+- HTML
+- Styled-Components
+- JavaScript
+- Axios
+- React
+
 ## Installing
 <pre>
   <code>$ git clone https://github.com/francinehahn/pokedex.git</code>
